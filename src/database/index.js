@@ -9,5 +9,6 @@ Sala.init(sequelize)
 Film.init(sequelize)
 
 Film.associate(sequelize.models)
+Sala.associate(sequelize.models)
 
 module.exports = sequelize

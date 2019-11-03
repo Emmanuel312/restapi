@@ -1,5 +1,6 @@
 const { Router } = require('express')
 const salaController = require('./controllers/salaController')
+const FilmController = require('./controllers/FilmController')
 const routes = Router()
 
 // crud de salas
@@ -12,7 +13,8 @@ routes.delete('/salas/:id', salaController.delete)
 
 // crud dos filmes
 
-//routes.post('/salas/film') // criar um filme
+routes.post('/salas/:sala_id/films', FilmController.store) // criar um filme
+routes.get('/salas/:sala_id/films', FilmController.index)
 
 
 module.exports = routes

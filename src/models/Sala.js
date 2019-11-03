@@ -10,6 +10,11 @@ class Sala extends Model
             numSala: DataTypes.STRING
         },{ sequelize,tableName: 'sala' })
     }
+
+    static associate(models)
+    {
+        this.hasMany(models.Film, { foreignKey: 'sala_id', as: 'films' })
+    }
 }
 
 

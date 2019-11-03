@@ -8,7 +8,7 @@ class Film extends Model
         {
             horario: DataTypes.DATE,
             genero: DataTypes.STRING
-        },{ sequelize,tableName: 'sala' })
+        },{ sequelize,tableName: 'film' })
     }
 
     static associate(models)
